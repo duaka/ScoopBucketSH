@@ -1,0 +1,41 @@
+{
+    "version": "1.77.0.41307",
+    "description": "Tabbed, multi-protocol, remote connections manager",
+    "homepage": "https://mremoteng.org/",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.20/mRemoteNG-Installer-1.76.20.24615.msi",
+    "hash": "2c4d1efb90124f885215f88304c9ecc8bbeecc9cca285f6d17baae43b49f6227",
+    "notes": "[WARNING] To prevent conflicts with other versions(stable or nightly), mRemoteNG.exe alias to mRemote-preview",
+    "extract_dir": "mRemoteNG-preview",
+    "bin": [
+        [
+            "mRemoteNG.exe",
+            "mRemoteNG-preview"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mRemoteNG-preview.exe",
+            "mRemoteNG Preview"
+        ]
+    ],
+    "persist": [
+        "confCons.xml",
+        "extApps.xml",
+        "mRemoteNG.settings",
+        "pnlLayout.xml"
+    ],
+    "checkver": {
+        "url": "https://github.com/mRemoteNG/mRemoteNG.github.io/blob/main/_data/releases.json",
+        "jsonpath": "$.prerelease..portable.browser_download_url",
+        "regex": "mRemoteNG-Portable-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v$matchHead/mRemoteNG-Portable-$version.msi",
+        "hash": {
+            "mode": "json",
+            "url": "https://github.com/mRemoteNG/mRemoteNG.github.io/blob/main/_data/releases.json",
+            "jsonpath": "$.prerelease..portable.checksum"
+        }
+    }
+}
