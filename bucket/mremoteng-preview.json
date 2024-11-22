@@ -27,7 +27,8 @@
         "confCons.xml",
         "extApps.xml",
         "mRemoteNG.settings",
-        "pnlLayout.xml"
+        "pnlLayout.xml",
+        "mRemoteNG.log"
     ],
     "checkver": {
         "url": "https://raw.githubusercontent.com/mRemoteNG/mRemoteNG.github.io/refs/heads/main/_data/releases.json",
