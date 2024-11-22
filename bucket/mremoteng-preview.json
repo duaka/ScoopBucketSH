@@ -31,11 +31,11 @@
         "regex": "mRemoteNG-Portable-([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v$matchHead/mRemoteNG-Portable-$version.zip",
-        "hash": {
-            "mode": "json",
-            "url": "https://raw.githubusercontent.com/mRemoteNG/mRemoteNG.github.io/refs/heads/main/_data/releases.json",
-            "jsonpath": "$.prerelease..portable.checksum"
-        }
+        "url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v$matchHead/mRemoteNG-Portable-$version.zip"
+        // "hash": {
+        //     "mode": "json",
+        //     "url": "https://raw.githubusercontent.com/mRemoteNG/mRemoteNG.github.io/refs/heads/main/_data/releases.json",
+        //     "jsonpath": "$.prerelease..portable.checksum"
+        // }
     }
 }
